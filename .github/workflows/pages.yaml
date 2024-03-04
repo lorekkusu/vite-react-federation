@@ -16,7 +16,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Build
-        run: yarn build --base /${{ github.repository }}
+        run: yarn build --base /${{ github.event.repository.name }}
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
